@@ -1,54 +1,247 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta
+<head>
+  <meta charset="utf-8"/>
+  <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
+  />
 
-    <title>AWS Presentation</title>
+  <title>AWS Presentation</title>
 
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/reveal.css" />
-    <link rel="stylesheet" href="css/theme/black.css" />
+  <link rel="stylesheet" href="css/reset.css"/>
+  <link rel="stylesheet" href="css/reveal.css"/>
+  <link rel="stylesheet" href="css/theme/black.css"/>
 
-    <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="lib/css/monokai.css" />
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/monokai.css"/>
 
-    <!-- Printing and PDF exports -->
-    <script>
-      var link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.type = "text/css";
-      link.href = window.location.search.match(/print-pdf/gi)
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.type = "text/css";
+    link.href = window.location.search.match(/print-pdf/gi)
         ? "css/print/pdf.css"
         : "css/print/paper.css";
-      document.getElementsByTagName("head")[0].appendChild(link);
-    </script>
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides">
-        <section><h1>Amazon Web Services</h1></section>
-      </div>
-    </div>
+    document.getElementsByTagName("head")[0].appendChild(link);
+  </script>
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+    <section>
+      <h3>Amazon Web Services</h3>
+      <h5>Serverless</h5>
+    </section>
+    <section>
+      <section data-markdown>
+          <textarea data-template>
+            ### Serverless?
+            - Cloud native
+            - Highly scalable
+            - High availability
+            - Rapid development
+            - Pay for what you actually use
+            - Server management is a thing of the past
+          </textarea>
+      </section>
+      <section data-markdown>
+        <textarea data-template>
+          ### AWS Serverless Services
+          <img height="200" width="200" src="images/Amazon-Simple-Storage-Service-S3_dark-bg@4x.png"
+               title="S3"/>
+          <img height="200" width="200" src="images/Amazon-API-Gateway_dark-bg@4x.png"
+               title="API Gateway"/>
+          <img height="200" width="200" src="images/AWS-Lambda_dark-bg@4x.png" title="Lambda"/>
+          <img height="200" width="200" src="images/Amazon-DynamoDB_dark-bg@4x.png"
+               title="DynamoDB"/>
+          <br/>
+          And many more...
+          <br/>
+          <small><a target="_blank" href="https://aws.amazon.com/serverless/">Serverless Computing - Amazon Web Services</a></small>
+        </textarea>
+      </section>
+    </section>
+    <section>
+      <section data-markdown>
+        <textarea data-template>
+          ### Building a serverless application
+          <img height="100" width="100" src="images/Amazon-Simple-Storage-Service-S3_dark-bg@4x.png"
+               title="S3"/>
+          <img height="100" width="100" src="images/Amazon-API-Gateway_dark-bg@4x.png"
+               title="API Gateway"/>
+          <img height="100" width="100" src="images/AWS-Lambda_dark-bg@4x.png" title="Lambda"/>
+          <img height="100" width="100" src="images/Amazon-DynamoDB_dark-bg@4x.png"
+               title="DynamoDB"/>
+          <img height="100" width="100" src="images/Amazon-CloudFront_dark-bg@4x.png"
+               title="CloudFront"/>
+          <img height="100" width="100" src="images/Amazon-CloudWatch@4x.png" title="CloudWatch"/>
+          <img height="100" width="100" src="images/Amazon-Cognito_dark-bg@4x.png" title="Cognito"/>
+          <img height="100" width="100" src="images/AWS-Certificate-Manager_dark-bg@4x.png"
+               title="Certificate Manager"/>
+        </textarea>
+      </section>
+      <section>
+        <h3>Certificate Manager</h3>
+        <img height="100" width="100" src="images/AWS-Certificate-Manager_dark-bg@4x.png"
+             title="Certificate Manager"/>
+        <br/>
+        <ul>
+          <li>Generate certificates for domains</li>
+          <li>Automatic renewal</li>
+          <li>Certs Generated:
+            <ul>
+              <li>api.roorise.dev</li>
+              <li>auth.roorise.dev</li>
+              <li>demo.roorise.dev</li>
+              <li>presentation.roorise.dev</li>
+            </ul>
+          </li>
+        </ul>
+        <br/>
+        <a target="_blank" href="https://console.aws.amazon.com/acm/home?region=us-east-1#/">Certificate
+          Manager</a>
+      </section>
+      <section>
+        <h3>CloudFront</h3>
+        <img height="100" width="100" src="images/Amazon-CloudFront_dark-bg@4x.png"
+             title="CloudFront"/>
+        <br/>
+        <ul>
+          <li>Content Delivery Network</li>
+          <li>Global Distribution</li>
+          <li>DDoS Protection</li>
+          <li>Geo Restriction</li>
+        </ul>
+        <br/>
+        <a target="_blank" href="https://console.aws.amazon.com/cloudfront/home?region=us-east-1">CloudFront</a>
+      </section>
+      <section>
+        <h3>Cognito</h3>
+        <img height="100" width="100" src="images/Amazon-Cognito_dark-bg@4x.png" title="Cognito"/>
+        <br/>
+        <ul>
+          <li>Authentication</li>
+          <li>Free 50,000 MAU</li>
+          <li>Can integrate with Federation providers</li>
+          <li>Can add your own OAuth2 Federation</li>
+        </ul>
+        <br/>
+        <a target="_blank"
+           href="https://eu-west-1.console.aws.amazon.com/cognito/users/?region=eu-west-1#/pool/eu-west-1_3GiYISyAa/details?_k=8pd4de">Cognito</a>
+      </section>
+      <section>
+        <h3>S3</h3>
+        <img width="100" height="100" src="images/Amazon-Simple-Storage-Service-S3_dark-bg@4x.png"
+             title="S3"/>
+        <br/>
+        <ul>
+          <li>Object Storage</li>
+          <li>Apps deployed here:
+            <ul>
+              <li>This presentation!</li>
+              <li>Demo WebApp</li>
+            </ul>
+          </li>
+        </ul>
+        <br/>
+        <a target="_blank" href="https://s3.console.aws.amazon.com/s3/home?region=eu-west-2">S3
+          Console</a>
+      </section>
+      <section>
+        <h3>API Gateway</h3>
+        <img height="100" width="100" src="images/Amazon-API-Gateway_dark-bg@4x.png"
+             title="API Gateway"/>
+        <br/>
+        <ul>
+          <li>Build APIs quick and easy</li>
+          <li>Free tier: 1,000,000req p/m</li>
+          <li>Being used for:
+            <ul>
+              <li>CREATE a post for a user</li>
+              <li>GET all posts for a user</li>
+              <li>UPDATE a post for a user</li>
+              <li>DELETE a post for a user</li>
+            </ul>
+          </li>
+        </ul>
+        <br/>
+        <a target="_blank"
+           href="https://eu-west-1.console.aws.amazon.com/apigateway/main/apis?region=eu-west-1">API
+          Gateway</a>
+      </section>
+      <section>
+        <h3>Lambda</h3>
+        <img height="100" width="100" src="images/AWS-Lambda_dark-bg@4x.png" title="Lambda"/>
+        <br/>
+        <ul>
+          <li>Function as a service</li>
+          <li>Many runtimes available as well as BYO Runtime</li>
+          <li>1,000,000 Free req p/m</li>
+          <li>Concurrency</li>
+          <li>Being used for the implementation of our API</li>
+        </ul>
+        <br/>
+        <a target="_blank"
+           href="https://eu-west-1.console.aws.amazon.com/lambda/home?region=eu-west-1#/discover">Lambda</a>
+      </section>
+      <section>
+        <h3>DynamoDB</h3>
+        <img height="100" width="100" src="images/Amazon-DynamoDB_dark-bg@4x.png"
+             title="DynamoDB"/>
+        <br/>
+        <ul>
+          <li>Fully managed NoSQL DB</li>
+          <li>Create a table and go!</li>
+          <li>Being used to store our users posts</li>
+        </ul>
+        <br/>
+        <a target="_blank"
+           href="https://eu-west-1.console.aws.amazon.com/dynamodb/home?region=eu-west-1#tables:selected=posts;tab=overview">DynamoDB</a>
+      </section>
+      <section>
+        <h3>CloudWatch</h3>
+        <img height="100" width="100" src="images/Amazon-CloudWatch@4x.png" title="CloudWatch"/>
+        <br/>
+        <ul>
+          <li>Logs!</li>
+          <li>Metrics!</li>
+        </ul>
+        <br/>
+        <a target="_blank"
+           href="https://eu-west-1.console.aws.amazon.com/cloudwatch/home?region=eu-west-1">CloudWatch</a>
+      </section>
+    </section>
+    <section>
+      <section data-markdown>
+        <textarea data-template>
+          ### Architecture
+          ![](images/architecture.png)
+        </textarea>
+      </section>
+      <section>
+        <a href="https://demo.roorise.dev" target="_blank">https://demo.roorise.dev</a>
+      </section>
+    </section>
+  </div>
+</div>
 
-    <script src="js/reveal.js"></script>
+<script src="js/reveal.js"></script>
 
-    <script>
-      // More info about config & dependencies:
-      // - https://github.com/hakimel/reveal.js#configuration
-      // - https://github.com/hakimel/reveal.js#dependencies
-      Reveal.initialize({
-        hash: true,
-        dependencies: [
-          { src: "plugin/markdown/marked.js" },
-          { src: "plugin/markdown/markdown.js" },
-          { src: "plugin/highlight/highlight.js" },
-          { src: "plugin/notes/notes.js", async: true },
-        ],
-      });
-    </script>
-  </body>
+<script>
+  // More info about config & dependencies:
+  // - https://github.com/hakimel/reveal.js#configuration
+  // - https://github.com/hakimel/reveal.js#dependencies
+  Reveal.initialize({
+    hash: true,
+    dependencies: [
+      {src: "plugin/markdown/marked.js"},
+      {src: "plugin/markdown/markdown.js"},
+      {src: "plugin/highlight/highlight.js"},
+      {src: "plugin/notes/notes.js", async: true},
+    ],
+  });
+</script>
+</body>
 </html>
